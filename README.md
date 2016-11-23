@@ -55,7 +55,7 @@ START_FIRST=true
 ## Running it
 After your environmental variables are set, you can run it like this:
 
-`curl https://raw.githubusercontent.com/swaggy/rancher-deploy/master/rancher-deploy.sh | sh`
+`curl https://raw.githubusercontent.com/swaggy/rancher-deploy/master/rancher-deploy.sh | bash`
 
 ## Example CircleCi deployment
 
@@ -64,7 +64,7 @@ deployment:
   master:
     branch: master
     commands:
-      - curl https://raw.githubusercontent.com/swaggy/rancher-deploy/master/rancher-deploy.sh | sh:
+      - curl https://raw.githubusercontent.com/swaggy/rancher-deploy/master/rancher-deploy.sh | bash:
           environment:
             ACCESS_KEY: $RANCHER_ACCESS_KEY
             SECRET_KEY: $RANCHER_SECRET_KEY
