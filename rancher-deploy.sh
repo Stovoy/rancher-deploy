@@ -1,4 +1,4 @@
-#!/bin/bash -ex
+#!/bin/bash -e
 
 # Needs `unzip`, `jq` packages.
 if ! which unzip > /dev/null; then
