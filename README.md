@@ -55,4 +55,4 @@ START_FIRST=true
 ## Running it
 After your environmental variables are set, you can run it like this:
 
-`curl https://github.com/swaggy/rancher-deploy/blob/master/rancher-deploy.sh | sh`
+`curl https://raw.githubusercontent.com/swaggy/rancher-deploy/master/rancher-deploy.sh | sh`
