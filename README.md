@@ -56,3 +56,21 @@ START_FIRST=true
 After your environmental variables are set, you can run it like this:
 
 `curl https://raw.githubusercontent.com/swaggy/rancher-deploy/master/rancher-deploy.sh | sh`
+
+## Example CircleCi deployment
+
+```yaml
+deployment:
+  master:
+    branch: master
+    commands:
+      - curl https://raw.githubusercontent.com/swaggy/rancher-deploy/master/rancher-deploy.sh | sh:
+          environment:
+            ACCESS_KEY: $RANCHER_ACCESS_KEY
+            SECRET_KEY: $RANCHER_SECRET_KEY
+            RANCHER_URL: $RANCHER_URL
+            STACK_NAME: $CIRCLE_PROJECT_REPONAME
+            SERVICE_NAME: $CIRCLE_PROJECT_REPONAME
+            DOCKER_IMAGE: $DOCKER_REGISTRY/$DOCKER_NAMESPACE/$DOCKER_IMAGE
+            TAG: $DOCKER_TAG
+```
